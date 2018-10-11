@@ -11,7 +11,6 @@ footer {
     left: 0px;
     right: 0px;
     height: 50px;
-    background-color: #041cb9b0;
     color: #fff;
 }
 
@@ -21,3 +20,24 @@ footer {
     bottom: 0px;
     line-height: 20px;
 }
+
+.navbar, footer {
+    background-color: #160907;
+}
+
+.navbar .navbar-brand {
+    color: #ecf0f1;
+    float: left;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+    color: #ffbbbc;
+}
+
+.navbar li {
+    float: left;
+    list-style-type: none;
+}
+
+
