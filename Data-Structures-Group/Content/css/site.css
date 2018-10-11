@@ -8,7 +8,16 @@
 footer {
     position: fixed;
     bottom: 0px;
-    left: 0px; 
-    right: 0px; 
-    height: 150px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    background-color: #041cb9b0;
+    color: #fff;
+}
+
+.bottom_right {
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+    line-height: 20px;
 }
