@@ -4,3 +4,11 @@
     margin-right: auto;
     width: 50%;
 }
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px; 
+    right: 0px; 
+    height: 150px;
+}
