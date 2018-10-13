@@ -13,6 +13,11 @@ namespace Data_Structures_Group.Controllers
         {
             return View();
         }
+
+        public ActionResult Exit()
+        {
+            return Redirect("https://www.byu.edu/");
+        }
     }
 
     
