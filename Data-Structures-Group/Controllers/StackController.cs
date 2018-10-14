@@ -61,12 +61,11 @@ namespace Data_Structures_Group.Controllers
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch(); //Code from Professor Anderson
 
             sw.Start();
-            if (myStack.Contains("New Entry 1000"))
+            if (myStack.Contains("New Entry 1000"))//Looks for 'New Entry 1000'
             {
                 ViewBag.Status = "Item Found";
             }
-            myStack.Contains("New Entry 1000"); //Looks for 'New Entry 1000'
-            if (myStack.Count == 0) //If there is nothing in the stack, the item can't be found
+            else //If there is nothing in the stack, the item can't be found
             {
                 ViewBag.Status = "Item not found";
             }
