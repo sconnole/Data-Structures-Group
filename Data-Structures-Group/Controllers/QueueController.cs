@@ -50,6 +50,20 @@ namespace Data_Structures_Group.Controllers
             return View("Index");
         }
 
+        public ActionResult Delete()
+        {
+            if (myQueue.Count == 0)
+            {
+                ViewBag.Status = "No Items to remove";
+            }
+            else
+            {
+                ViewBag.Status = "Removed " + myQueue.Peek();
+                myQueue.Dequeue();
+            }
+            return View("Index");
+        }
+
         public ActionResult Clear()
         {
             myQueue.Clear(); //Clears all items

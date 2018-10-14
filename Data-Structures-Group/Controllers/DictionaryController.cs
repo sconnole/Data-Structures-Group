@@ -49,6 +49,20 @@ namespace Data_Structures_Group.Controllers
             return View("Index");
         }
 
+        public ActionResult Delete()
+        {
+            if (myDictionary.Count == 0)
+            {
+                ViewBag.Status = "No Items to remove";
+            }
+            else
+            {
+                ViewBag.Status = "Removed " + myDictionary.Values.First();
+                myDictionary.Remove(myDictionary.Keys.First());
+            }
+            return View("Index");
+        }
+
         public ActionResult Clear()
         {
             myDictionary.Clear(); //Clears all items

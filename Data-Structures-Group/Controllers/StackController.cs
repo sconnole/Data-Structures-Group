@@ -48,6 +48,20 @@ namespace Data_Structures_Group.Controllers
             ViewBag.Stack = myStack; //Sends the stack to the viewbag so that it can be displayed
             return View("Index");
         }
+
+        public ActionResult Delete ()
+        {
+            if (myStack.Count == 0)
+            {
+                ViewBag.Status = "No Items to remove";
+            }
+            else
+            {
+                ViewBag.Status = "Removed " + myStack.Peek();
+                myStack.Pop();
+            }
+            return View("Index");
+        }
         
         public ActionResult Clear ()
         {
