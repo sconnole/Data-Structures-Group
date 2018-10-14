@@ -3,5 +3,33 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="w3-sidebar w3-bar-block" style="width:25%">
+    <a href="@Url.Action("AddOne", "Stack")" class="w3-bar-item w3-button">Add one item to the stack</a>
+    <a href="@Url.Action("AddMany", "Stack")" class="w3-bar-item w3-button">Add 2,000 items to the stack</a>
+    <a href="@Url.Action("Display", "Stack")" class="w3-bar-item w3-button">Display Items in Stack</a>
+    <a href="@Url.Action("Clear", "Stack")" class="w3-bar-item w3-button">Clear Items in Stack</a>
+    <a href="@Url.Action("Search", "Stack")" class="w3-bar-item w3-button">Search for 'New Entry 1000' in Stack</a>
+</div>
+
+<h2>Stack</h2>
+
+<div class="status">
+    @Html.ViewBag.Status
+    @if (ViewBag.StopWatch != null)
+    {
+        <p>Time Elapsed: @Html.ViewBag.StopWatch</p>
+    }
+</div>
+<table>
+    @if (ViewBag.Stack != null)
+    {
+        foreach (var item in ViewBag.Stack)
+        {
+            <tr>
+                <td>@item</td>
+            </tr>
+        }
+    }
+</table>
+
 

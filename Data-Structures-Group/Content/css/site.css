@@ -23,6 +23,12 @@ footer {
 
 .navbar, footer {
     background-color: #160907;
+    z-index: 2;
+}
+
+.body-content {
+    padding: 0px 20px;
+    margin-bottom: 60px;
 }
 
 .navbar .navbar-brand {
@@ -40,4 +46,28 @@ footer {
     list-style-type: none;
 }
 
+.body-content .w3-sidebar {
+    top: 0px;
+    height: 100%;
+    float: right;
+    background-color: #160907;
+    right: 0px;
+    color: #fff;
+}
 
+.w3-bar-block .w3-bar-item:first-child {
+    margin-top: 60px;
+}
+
+.w3-bar-block .w3-bar-item, .status {
+    background: #c10e0e;
+    outline: 0;
+    margin-bottom: 3px;
+}
+
+.status {
+    padding: 10px 0px;
+    color: #fff;
+    width: 25%;
+    text-align: center;
+}
