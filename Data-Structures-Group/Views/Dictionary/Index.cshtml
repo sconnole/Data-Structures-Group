@@ -1,7 +1,32 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewBag.Title = "Dictionary";
 }
 
-<h2>Index</h2>
+<div class="w3-sidebar w3-bar-block" style="width:25%">
+    <a href="@Url.Action("AddOne", "Dictionary")" class="w3-bar-item w3-button">Add one item to the Dictionary</a>
+    <a href="@Url.Action("AddMany", "Dictionary")" class="w3-bar-item w3-button">Add 2,000 items to the Dictionary</a>
+    <a href="@Url.Action("Display", "Dictionary")" class="w3-bar-item w3-button">Display Items in Dictionary</a>
+    <a href="@Url.Action("Clear", "Dictionary")" class="w3-bar-item w3-button">Clear Items in Dictionary</a>
+    <a href="@Url.Action("Search", "Dictionary")" class="w3-bar-item w3-button">Search for 'New Entry 1000' in Dictionary</a>
+</div>
 
+<h2>Dictionary</h2>
+
+<div class="status">
+    @Html.ViewBag.Status
+    @if (ViewBag.StopWatch != null)
+    {
+        <p>Time Elapsed: @Html.ViewBag.StopWatch</p>
+    }
+</div>
+<table>
+    @if (ViewBag.Dictionary != null)
+    {
+        foreach (var item in ViewBag.Dictionary)
+        {
+            <tr>
+                <td>@item</td>
+            </tr>
+        }
+    }
+</table>
